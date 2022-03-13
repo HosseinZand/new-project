@@ -1,7 +1,20 @@
+let space = ["Earth","Stars","Galaxy","Moon","Nebula","Shuttle"];
+
+let randomIndex;
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
+  background(300);
 }
 
 function draw() {
-  background(230);
+
+}
+
+function mousePressed() {
+  background(random(200));
+  randomIndex = [int(random(space.length))]);
+  text(space[randomIndex].name, 100,100);
+  space.splice(randomIndex, 1);
+
 }
