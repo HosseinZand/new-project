@@ -1,20 +1,33 @@
-let space = ["Earth","Stars","Galaxy","Moon","Nebula","Shuttle"];
+const images = [
+  {
+      name: 'Earth',
+      src: 'Earth.jpg',
+  },
+  {
+      name: 'Nebula',
+      src: 'Nebula.jpg',
+  },
+  {
+      name: 'Galaxy',
+      src: 'Galaxy.jpg',
+  },
+  {
+      name: 'Moon',
+      src: 'Moon.jpg',
+  },
+  {
+      name: 'Shuttle',
+      src: 'Shuttle.jpg',
+  },
+  {
+      name: 'Astronaut',
+      src: 'Astronaut.jpg',
+  },
+];
 
-let randomIndex;
-
-function setup() {
-  createCanvas(600, 600);
-  background(300);
-}
-
-function draw() {
-
-}
-
-function mousePressed() {
-  background(random(200));
-  randomIndex = [int(random(space.length))]);
-  text(space[randomIndex].name, 100,100);
-  space.splice(randomIndex, 1);
-
+function get_random_image() {
+  random_index = Math.floor(Math.random() * images.length);
+  selected_image = images[random_index];
+  document.querySelector('#image_name').innerHTML = selected_image.name;
+  document.querySelector('#image_shower').src =  `./images/${selected_image.src}`;
 }
