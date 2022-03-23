@@ -4,6 +4,7 @@ html, body {
   background-image: url('images/Background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: Baloo;
 }
 
 div.container {
@@ -34,6 +35,7 @@ button {
 
 button:hover {
   box-shadow: inset 100px 0 0 0 #1FFF06;
+  color: black;
 }
 
 div.row {
@@ -66,7 +68,7 @@ p.description {
   list-style: none;
   width: 25px;
   height: 25px;
-  background: rgba(255,0,0,0.2);
+  background: rgba(0,0,255,0.2);
   animation: animate 20s linear infinite;
   bottom: 50px;
 }
@@ -144,4 +146,19 @@ p.description {
     transform: translateY(-800px) rotate(360deg);
     opacity: 0;
   }
+}
+div.link-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a:visited {
+  color: green;
 }
